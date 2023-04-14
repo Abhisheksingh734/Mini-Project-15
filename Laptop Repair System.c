@@ -30,8 +30,8 @@ int main() {
         fclose(file);
     }
 
-    printf("*************  Welcome to our device repair service.  *************\n\n");
-    printf("> Do you want to sign in or create a new user ? \n");
+    printf("Welcome to our device repair service.\n");
+    printf("Do you want to sign in or create a new user?\n");
     printf("Enter 's' for sign in and 'n' for new user: ");
 
     char choice;
@@ -43,7 +43,7 @@ int main() {
         scanf("%s", username);
 
         int found_user = 0;
-        for (i =0;i<num_users;i++) {
+        for (i = 0; i < num_users; i++) {
             if (strcmp(username, users[i].username) == 0) {
                 found_user = 1;
                 printf("Welcome back, %s.\n", username);
@@ -95,7 +95,7 @@ int main() {
         }
     }
 
-    if(choice =='n') {
+    if (choice == 'n') {
         printf("What is the problem with your device?\n");
         printf("1. Screen, keyboard or touch not working.\n");
         printf("2. System very slow, or virus infected.\n");
@@ -169,10 +169,9 @@ int main() {
         }
     }
 } else {
-    printf("No such user was found in the database.\n");
+    printf("...\n");
 }
 
 fclose(file);
 return 0;
 }
-
